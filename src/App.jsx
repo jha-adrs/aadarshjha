@@ -1,33 +1,33 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import {  GithubIcon, LinkedinIcon, Mail } from 'lucide-react'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="flex flex-col inset-0 w-full h-full bg-transparent text-white">
+        <h1 className='font-bold m-4'>
+          Hi 👋
+        </h1>
+        <h2 className='font-bold'>
+          I&apos;m Aadarsh
+        </h2>
+        <h4 className=" m-3">
+          This website is currently under construction...
+        </h4>
+        <div className=" bg-transparent flex flex-row justify-center m-4">
+          <a href="https://github.com/jha-adrs" target="_blank" rel="noopener noreferrer" className="flex items-center text-black p-2  border-black hover:bg-gray-700 rounded-lg">
+            <GithubIcon color='white' size={24} />
+          </a>
+          <a href="https://www.linkedin.com/in/jha-aadarsh" target="_blank" rel="noopener noreferrer" className="flex items-center text-black p-2  border-black hover:bg-gray-700 rounded-lg">
+            <LinkedinIcon color='white' size={24} />
+          </a>
+          <a href="mailto:aadarshjha6783@gmail.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-black p-2  border-black hover:bg-gray-700 rounded-lg">
+          <Mail color='white' size={24} />
+          </a>
+
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
